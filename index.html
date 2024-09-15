@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Quan Nguyen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="icon" href="assets/images/favicon.png">
+  <script src="scripts/main.js" defer></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      overflow: overlay;
+    }
+
+    /* Custom scrollbar styles */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: rgb(128, 128, 128, 0.5);
+      border-radius: 5px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1f2358',
+            secondary: '#ffa500',
+            background: '#f7f8fa',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="bg-[#1f2358] px-20 sticky top-0 z-50">
+    <ul class="flex justify-end items-center h-[60px] text-white">
+      <li class="h-full leading-[60px]">
+        <a class="block px-3 mx-3 hover:text-blue-500" href="#">Home</a>
+      </li>
+      <li class="h-full leading-[60px]">
+        <a class="block px-3 mx-3 hover:text-blue-500" href="#about-me">About me</a>
+      </li>
+      <li class="h-full leading-[60px]">
+        <a class="block px-3 mx-3 hover:text-blue-500" href="#skills">Skills</a>
+      </li>
+      <li class="h-full leading-[60px]">
+        <a class="block px-3 mx-3 hover:text-blue-500" href="#experiences">Experiences</a>
+      </li>
+      <li class="h-full leading-[60px] relative group">
+        <a class="block px-3 mx-3 hover:text-blue-500" href="#projects">Projects</a>
+        <ul class="absolute right-0 hidden group-hover:block bg-white shadow-md rounded-md py-2 w-48">
+          <li><a href="#personal-projects"
+              class="leading-normal px-2 py-2 block bg-white text-primary hover:bg-primary hover:text-white">Personal
+              Projects</a></li>
+          <li><a href="#skydev-projects"
+              class="leading-normal px-2 py-2 block bg-white text-primary hover:bg-primary hover:text-white">Skydev
+              Vietnam</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+  <section id="home" class="px-20 py-16">
+    <div class="flex justify-between items-center">
+      <div>
+        <div class="text-left">
+          <h1 class="text-4xl mb-2">Hello,</h1>
+          <h1 class="text-6xl font-bold mb-1">I'm <span class="text-blue-500">Quan Nguyen</span></h1>
+          <p class="text-lg mt-2">I'm a professional backend Web developer.</p>
+        </div>
+        <div class="mt-5">
+          <button class="bg-[#ffa500] hover:bg-[#1f2358] text-white px-4 py-2 rounded-md"
+            onclick="downloadCV()">Download CV</button>
+        </div>
+        <div class="mt-4">
+          <a href="https://www.linkedin.com/in/quan-nguyen-3a8846255/" target="_blank"
+            class="mr-2.5 text-[#1f2358] hover:text-[#ffa500] font-medium relative inline-block after:block after:invisible hover:after:visible after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#ffa500] after:transition-all transition-all ease-in-out after:ease-in-out delay-50 after:delay-50">
+            LinkedIn
+          </a>
+          <a href="https://www.facebook.com/you.can.me.is.TONY/" target="_blank"
+            class="mr-2.5 text-[#1f2358] hover:text-[#ffa500] font-medium relative inline-block after:block after:invisible hover:after:visible after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#ffa500] after:transition-all transition-all ease-in-out after:ease-in-out delay-50 after:delay-50">
+            Facebook
+          </a>
+          <a href="https://dev.to/nxquan" target="_blank"
+            class="mr-2.5 text-[#1f2358] hover:text-[#ffa500] font-medium relative inline-block after:block after:invisible hover:after:visible after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#ffa500] after:transition-all transition-all ease-in-out after:ease-in-out delay-50 after:delay-50">
+            Dev.to
+          </a>
+          <a href="mailto:quananhb2410@gmail.com"
+            class="text-[#1f2358] hover:text-[#ffa500] font-medium relative inline-block after:block after:invisible hover:after:visible after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#ffa500] after:transition-all transition-all ease-in-out after:ease-in-out delay-50 after:delay-50">
+            Gmail
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <div class="relative">
+          <img src="assets/images/profile.jpg" class="w-[400px] h-[400px] object-cover rounded-full" alt="profile">
+          <div
+            class="absolute bottom-0 left-0 right-0 h-[100px] bg-secondary/40 rounded-[50%] -z-10 transform translate-y-1/4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-me" class="px-20 py-16 bg-background">
+    <div class="flex justify-between items-center">
+      <div class="w-1/3">
+        <img src="assets/images/sleep.png" class="w-full h-auto" alt="About me image">
+      </div>
+
+      <div class="w-2/3 ml-5">
+        <h1 class="text-4xl mb-3">About me</h1>
+        <p class="mb-1"><span class="font-bold">Education:</span> GPA: > 8, Software Engineering - <a
+            href="https://www.hcmus.edu.vn/" target="_blank" class="text-primary hover:text-secondary">University of
+            Science HCM</a><span class="italic"> (10/2020 – 7/2024)</span></p>
+        <p class="mb-1"><span class="font-bold">Short goals:</span> Find a suitable position to apply the
+          knowledge that
+          is learned in university, improve my
+          personal skill, and complete the assigned tasks successfully. Train myself to become a professional
+          back-end developer in the field of websites...</p>
+        <p><span class="font-bold">Long goals: </span>Become a senior back-end developer and a new Solution Architect
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="px-20 py-16">
+    <h1 class="text-4xl mb-16">My skills</h1>
+    <div class="flex justify-between">
+      <!-- Front-end -->
+      <div class="bg-primary/[0.05] rounded-lg p-10 w-[30%] flex flex-col items-center relative">
+        <div class="bg-primary w-[80px] h-[80px] rounded-full flex justify-center items-center absolute -top-[40px]">
+          <img src="assets/images/front-end.svg" alt="Front-end" class="w-[44px] h-[37px]">
+        </div>
+        <h3 class="text-lg mt-4 font-medium">Front-end</h3>
+        <ul class="mt-2 w-full">
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/front-end/html.svg" alt="HTML" class="w-[16px] h-[16px] mr-2">
+            HTML, CSS, SCSS
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/front-end/js.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            JavaScript
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/front-end/react.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            ReactJS, React Native
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/front-end/next.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            NextJS
+          </li>
+        </ul>
+      </div>
+
+      <!-- Back-end -->
+      <div class="bg-primary/[0.05] rounded-lg p-10 w-[30%] flex flex-col items-center relative">
+        <div class="bg-primary w-[80px] h-[80px] rounded-full flex justify-center items-center absolute -top-[40px]">
+          <img src="assets/images/back-end.svg" alt="Back-end" class="w-[44px] h-[37px]">
+        </div>
+        <h3 class="text-lg mt-4 font-medium">Back-end</h3>
+        <ul class="mt-2 w-full">
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/nodejs.svg" alt="NodeJS" class="w-[16px] h-[16px] mr-2">
+            NodeJS
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/expressjs.svg" alt="ExpressJS" class="w-[16px] h-[16px] mr-2">
+            ExpressJS
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/nestjs.svg" alt="NestJS" class="w-[16px] h-[16px] mr-2">
+            NestJS
+          </li>
+          <div class="flex items-center">
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+            <span class="text-primary/[0.5] mx-2">ORM</span>
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+          </div>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/mysql.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            MySQL
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/postgres.svg" alt="Postgres" class="w-[16px] h-[16px] mr-2">
+            Postgres
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/mongodb.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            MongoDB
+          </li>
+
+          <div class="flex items-center">
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+            <span class="text-primary/[0.5] mx-2">Database</span>
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+          </div>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/mysql.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            MySQL
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/postgres.svg" alt="Postgres" class="w-[16px] h-[16px] mr-2">
+            Postgres
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/mongodb.svg" alt="JS" class="w-[16px] h-[16px] mr-2">
+            MongoDB
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/back-end/graphql.svg" alt="GraphQL" class="w-[16px] h-[16px] mr-2">
+            GraphQL
+          </li>
+        </ul>
+      </div>
+
+      <!-- Others -->
+      <div class="bg-primary/[0.05] rounded-lg p-10 w-[30%] flex flex-col items-center relative">
+        <div class="bg-primary w-[80px] h-[80px] rounded-full flex justify-center items-center absolute -top-[40px]">
+          <img src="assets/images/others.svg" alt="Others" class="w-[44px] h-[37px]">
+        </div>
+        <h3 class="text-lg mt-4 font-medium">Others</h3>
+        <ul class="mt-2 w-full">
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/others/aws/aws.svg" alt="AWS" class="w-[16px] h-[16px] mr-2">
+            AWS
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/others/optimization.svg" alt="Optimization" class="w-[16px] h-[16px] mr-2">
+            Optimization query / database
+          </li>
+          <div class="flex items-center">
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+            <span class="text-primary/[0.5] mx-2">CI/CD</span>
+            <div class="h-[1px] w-full bg-primary/[0.5] my-2"></div>
+          </div>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/others/ci/jenkins.svg" alt="Jenkins" class="w-[16px] h-[16px] mr-2">
+            Jenkins
+          </li>
+          <li class="flex items-center mb-1 text-primary">
+            <img src="assets/images/icons/others/ci/docker.svg" alt="Docker" class="w-[16px] h-[16px] mr-2">
+            Docker
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiences" class="px-20 py-16 bg-background">
+    <h1 class="text-4xl mb-16">Experiences</h1>
+    <ul>
+      <li class="flex">
+        <div class="flex-1">
+          <div class="flex items-center">
+            <img
+              src="https://media.licdn.com/dms/image/v2/C4D0BAQF6XKOVAJr6mQ/company-logo_100_100/company-logo_100_100/0/1663832596851/skydevvietnam_logo?e=1734566400&v=beta&t=8vxonpxplvPBCdCFMXWFn45wLZV6dlWNQfW2cwLl8wU"
+              alt="Skydev Vietnam" class="w-[48px] h-[48px]">
+            <div class="ml-3">
+              <p class="text-primary font-medium">Skydev Vietnam</p>
+              <span class="text-gray-500">Full-time</span>
+            </div>
+          </div>
+          <div class="ml-6 mt-1 relative">
+            <!-- Timeline line -->
+            <div class="absolute left-[9px] top-[18px] h-[calc(100%-72px)] w-[1px] bg-primary/[0.2]"></div>
+
+            <!-- Fresher position -->
+            <div class="ml-6 mb-6 relative">
+              <div
+                class="absolute left-[-22px] top-[2px] w-[16px] h-[16px] bg-primary/[0.5] rounded-full border-4 border-white">
+              </div>
+
+              <h4 class="text-primary font-medium">Fresher back-end developer</h4>
+              <span class="text-gray-500">07/2024 - Present</span>
+              <p><span class="font-medium">Techstacks:</span> NodeJS, ExpressJS, NestJS, MySQL, MongoDB, GraphQL, AWS,
+                Docker, Jenkins</p>
+            </div>
+
+            <!-- Internship position -->
+            <div class="ml-6 relative">
+              <!-- Timeline dot -->
+              <div
+                class="absolute left-[-22px] top-[2px] w-[16px] h-[16px] bg-primary/[0.5] rounded-full border-4 border-white">
+              </div>
+              <h4 class="text-primary font-medium">Internship back-end developer</h4>
+              <span class="text-gray-500">03/2024 - 06/2024</span>
+              <span class="text-gray-500 block">HCM, Vietnam</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 ml-10">
+          <h4 class="text-primary font-medium">Key responsibilities</h4>
+          <ul>
+            <li>- Develop robust APIs and server-side logic using NestJS.</li>
+            <li>- Integration: Deploy, manage, and optimize applications on AWS using services like Cloud Formation,
+              EC2, S3, Lambda, API Gateway, SES, SQS, SNS and DynamoDB.....</li>
+            <li>- Database Management: Design and manage databases, both SQL and NoSQL, ensuring data integrity and
+              performance..</li>
+            <li>- Collaboration: Work closely with cross-functional teams, including designers, product managers, and
+              other developers, to deliver high-quality products.
+            </li>
+          </ul>
+          <!-- <h4 class="text-primary font-medium mt-2">Others</h4>
+          <ul>
+            <li>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+            <li>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+            <li>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</li>
+          </ul> -->
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects" class="px-20 py-16">
+    <h1 class="text-4xl mb-8">Projects</h1>
+
+    <!-- Personal and Graduation Projects -->
+    <div class="mb-12" id="personal-projects">
+      <h2 class="text-2xl font-medium text-primary mb-4">Personal and Graduation Projects</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/projects/pms.png" alt="Project Name" class="w-full h-48">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Project Management
+              System – Vietnam
+              National University
+              HCM</h3>
+            <p class="text-gray-600 mb-4">
+              This sysem allows scientists to register their science research projects
+              which are sent to Vietnam National University. The admin side will review,
+              accept, or eject these projects and track the process from start, midterm,
+              final, acceptance.
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React (react-query, react-hook-forms)
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NestJS</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">MySQL</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Sequelize ORM</li>
+              </ul>
+            </div>
+            <div class="flex justify-between">
+              <a href="http://pms-vnuhcm.uit.edu.vn:8081/login" class="text-blue-500 hover:text-blue-700 font-medium"
+                target="_blank">Scientist website</a>
+              <a href="http://pms-vnuhcm.uit.edu.vn:8091/" class="text-blue-500 hover:text-blue-700 font-medium"
+                target="_blank">Admin website</a>
+
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/projects/zalo.png" alt="Project Name" class="w-full h-48">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Clone Zalo Website</h3>
+            <p class="text-gray-600 mb-4">
+              App allows users to chat with others. It was inspired by Zalo.
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NodeJS</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Express</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">MongoDB</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Socket.io</li>
+              </ul>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://github.com/nxquan/Zola" class="text-blue-500 hover:text-blue-700 font-medium"
+                target="_blank">Github</a>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/projects/lettutor.PNG" alt="Project Name" class="w-full h-48">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">LetTutor App</h3>
+            <p class="text-gray-600 mb-4">
+              An individual project for Advanced Mobile Development. This project
+              converts all pages of the website LetTutor into a mobile app but
+              concentrating on the user interface.
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React Native</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">TailwindCSS</li>
+              </ul>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://github.com/nxquan/LetTutor-HCMUS.git"
+                class="text-blue-500 hover:text-blue-700 font-medium" target="_blank">Github</a>
+              <a href="https://sandbox.app.lettutor.com/login" class="text-blue-500 hover:text-blue-700 font-medium"
+                target="_blank">Original website</a>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="assets/images/projects/chatbot.png" alt="Project Name" class="w-full h-48">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Chatbot App</h3>
+            <p class="text-gray-600 mb-4">
+              A chatbot using OpenAI API.
+              Allow users to ask questions and show answers through GPT 3.5 Tubor and manage your search history.
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">React Native</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">TailwindCSS</li>
+              </ul>
+            </div>
+            <div class="flex justify-between">
+              <a href="https://github.com/nxquan/Chatbot" class="text-blue-500 hover:text-blue-700 font-medium"
+                target="_blank">Github</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Skydev Vietnam Projects -->
+    <div class="mb-12" id="skydev-projects">
+      <h2 class="text-2xl font-medium text-primary mb-4">Skydev Vietnam</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="w-full h-48 relative group">
+            <img src="assets/images/projects/cafefinz.PNG" alt="Project Name" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="https://cafefinz.com/" target="_blank"
+                class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-300">
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">CafeFinz</h3>
+            <p class="text-gray-600 mb-4">
+              CafeFinz is a dynamic social platform for finance enthusiasts, offering a blend of user-generated content,
+              financial news, and market insights. It provides a space for users to share knowledge, discuss trends, and
+              stay informed about the latest developments in finance and related fields.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="text-sm font-medium">Role:</span> Back-end developer
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NestJS
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Postgres</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Typeorm</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Socket.io</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Redis</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Firebase Cloud Messaging</li>
+              </ul>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="w-full h-48 relative group">
+            <img src="assets/images/projects/rich.PNG" alt="Project Name" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="https://richbeautysupply.com/" target="_blank"
+                class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-300">
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Rich Beauty Supply</h3>
+            <p class="text-gray-600 mb-4">
+              Rich Beauty Supply is a leading supplier of beauty products, offering a wide range of high-quality
+              cosmetics, skincare, and hair care solutions. With a focus on customer satisfaction and innovation, they
+              provide a comprehensive selection of products to meet the diverse needs of their clients.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="text-sm font-medium">Role:</span> Back-end developer
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NestJS
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Postgres</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Typeorm</li>
+              </ul>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="w-full h-48 relative group">
+            <img src="assets/images/projects/trader.PNG" alt="Project Name" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="https://cafefinz.com/" target="_blank"
+                class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-300">
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">TraderHub</h3>
+            <p class="text-gray-600 mb-4">
+              TraderHub is a platform that provides a comprehensive suite of tools and resources for traders and
+              investors to analyze financial markets, manage their portfolios, and stay informed about the latest market
+              trends. It offers features such as real-time data, technical analysis tools, portfolio management, and
+              educational resources to help users make informed trading decisions.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="text-sm font-medium">Role:</span> Back-end developer
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NestJS
+                </li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Postgres</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Typeorm</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Low code platform Strapi</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Redis</li>
+              </ul>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="w-full h-48 relative group">
+            <img src="assets/images/projects/merritrade.PNG" alt="Project Name" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="https://merritrade.com" target="_blank"
+                class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-300">
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Merritrade</h3>
+            <p class="text-gray-600 mb-4">
+              Merritrade is a platform that provides a enviroment for users to learn about stock market.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="text-sm font-medium">Role:</span> Back-end developer
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Microservices</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NodeJS</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Postgres</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">GraphQL</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Redis</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">RabbitMQ</li>
+              </ul>
+            </div>
+        </li>
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="w-full h-48 relative group">
+            <img src="assets/images/projects/ssm.PNG" alt="Project Name" class="w-full h-full object-cover">
+            <div
+              class="absolute inset-0 bg-white bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="https://web-ssm.skydev.vn/sign-in" target="_blank"
+                class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-md transition-colors duration-300">
+                Visit Website
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-primary mb-2">Skydev Secret Management</h3>
+            <p class="text-gray-600 mb-4">
+              Skydev Secret Management is a platform that provides a secure way to manage secrets for developers like
+              ENV
+              file, VPS or anything. We have created a CLI to manage all of your secrets and push to my server.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <span class="text-sm font-medium">Role:</span> Back-end developer
+            </p>
+            <div class="mb-4">
+              <h4 class="text-sm font-medium text-gray-700 mb-2">Tech Stack:</h4>
+              <ul class="flex flex-wrap gap-2">
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">NestJS</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Postgres</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Typeorm</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Gitlab Oauth</li>
+                <li class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">CLI</li>
+              </ul>
+            </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Other Companies Projects -->
+    <!-- <div>
+      <h2 class="text-2xl font-medium text-primary mb-4">Other Companies</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <li class="bg-white rounded-lg shadow-md overflow-hidden">
+        </li>
+      </ul>
+    </div> -->
+  </section>
+</body>
+
+</html>
